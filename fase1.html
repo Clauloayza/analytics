@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body id="body">
+   <header>
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid row header">
+          <div class="navbar-header col-md-2 col-lg-2">
+              <a class="navbar-brand" href="#"><img src="./img/logo.png" id="img" alt=""></a>
+          </div>
+          <div class="col-md-5 col-lg-5" id="">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown ">
+                      <button class="btn btn-default dropdown-toggle nav-header proyecto" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Proyecto
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" id="proyecto" aria-labelledby="dropdownMenu1">
+                          <li><a class="title" href="#">Proyecto</a></li>
+                          <li><a href="#">Valle y pampa</a></li>
+                          <li><a href="#">Hortifrut</a></li>
+                          <li><a href="#">Talsa</a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle nav-header" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Fundo
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="title" href="">Fundo</a></li>
+                      <li><a href="#">Rocìo</a></li>
+                      <li><a href="#">Olmos</a></li>
+                      <li><a href="#">Virgen de las Mercedes</a></li>
+                      <li><a href="#">Barranca</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-caret-right text-left"></i>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle nav-header" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Cultivo
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="title" href="">Cultivo</a></li>
+                      <li><a href="#">Granada</a></li>
+                      <li><a href="#">Palto</a></li>
+                      <li><a href="#">Palto Orgánico</a></li>
+                      <li><a href="#">Arándano</a></li>
+                      <li><a href="#">Esparrago</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-caret-right"></i>
+                </div>
+              </div>   
+          </div>
+          <div class="col-md-5 col-lg-5 text-right">
+            <ul class="">
+                <button type="button" class="btn btn-primary" id="data"><span class="glyphicon glyphicon-open"></span> Subir Datos</button>
+              
+              <i class="fa fa-user"></i>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   </header> 
+   <section class="container-fuid sidebar-archive">
+          <a href="" data-toggle="modal" data-target="#exampleModal" class='text-left'><i class="fa fa-filter"></i>Filtros</a>
+          
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  <div class="modal-body">
+                      <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Variedad</th>
+                              <th>Año</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><li>Negros</li></td>
+                              <td><li>2013</li></td>
+                            </tr>
+                            <tr>
+                              <td><li>Rojos</li></td>
+                              <td><li>2014</li></td>
+                            </tr>
+                            <tr>
+                              <td><li>Americanos</li></td>
+                              <td><li>2015</li></td>
+                            </tr>
+                            <tr>
+                              <td><li>Agrios</li></td>
+                              <td><li>2016</li></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-primary">Filtrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          <ul class="sidebar-list-folder">
+            <li><a href="#" class="" data-toggle="modal" data-target="#smallModal"><i class="fa fa-save"></i></a></li>
+            <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-body">
+                      <div class="text-center"><i class="fa fa-save"></i></div> 
+                        <form>
+                            <div class="form-group">
+                              <label class="modal-text" for="file">Nombre Archivo:</label>
+                              <input type="text" class="form-control" id="file" placeholder="" value="Hortifrut Olmos Proyecciòn Mayo 2018">
+                            </div>
+                            <div class="form-group">
+                              <label class="modal-text" for="cultivo">Cultivo</label>
+                              <input type="text" class="form-control" id="cultivo" placeholder="" value="Aràndanos">
+                            </div>
+                          </form>
+                    </div>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">GUARDAR</button>
+                  </div>
+                </div>
+              </div>
+            <li><a href="#" class="" data-toggle="modal" data-target="#basicModal"><i class="fa fa-folder-open"></i></a></li>
+            <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-body">
+                      <div class="text-center">
+                        <i class="fa fa-folder-open"></i>
+                      </div>
+                        <label class="modal-text text-center" for="">Selecciona un archivo para abrir</label>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">Nombre Archivo</th>
+                                <th scope="col">Cultivo</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Hortifrut Olmos Proyección 22 Mayo 2018</td>
+                                <td class="text-center">Arándanos</td>
+                                <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <td>Hortifrut Olmos Clorofila 15 Abril 2018</td>
+                                <td class="text-center">Arándanos</td>
+                                <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <td>Talsa Vegetación 20 Marzo 2018</td>
+                                <td class="text-center">Paltos</td>
+                                <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <td>Talsa Vegetación 20 Marzo 2018</td>
+                                <td class="text-center">Paltos</td>
+                                <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <td>Talsa Clorofila 20 Marzo 2018</td>
+                                <td class="text-center">Uvas</td>
+                                <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <td>Talsa Proyección 20 Marzo 2018</td>
+                                <td class="text-center">Uvas</td>
+                                <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <button type="button" class="btn btn-default text-center" data-dismiss="modal">ABRIR</button>
+                  </div>
+                </div>
+              </div>
+            <li><i class="glyphicon glyphicon-save"></i></li>
+            <li><a href="javascript:void(0)" id="imprime"><i class="fa fa-print"></i></a></li>
+            <li><i class="fa fa-share-alt"></i></li>
+          
+          </ul>
+   </section>
+   <section class="container-fluid">
+     <div class="row">
+       <div class="col-lg-12 col-md-12">
+         <div class="col-lg-2">
+            <div class="dropdown date">
+                <button class="btn btn-default dropdown-toggle date" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dato o Imagen
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dato-image" aria-labelledby="dropdownMenu1">
+                  <ul class="nav nav-tabs">
+                      <li class="active"><a data-toggle="tab" href="#dato">Datos</a></li>
+                      <li class="img-tab"><a data-toggle="tab" href="#imagen">Imágenes</a></li>
+                    </ul>
+                  
+                    <div class="tab-content">
+                      <div id="dato" class="tab-pane fade in active">
+                        <ul id="menu">
+                          <li><input type="checkbox" name="list" id="nivel1-1"> <img class="icon" src="./img/icon/vegetacion.png" alt=""><label id="variables-section" for="nivel1-1">Vegetación</label>
+                          <ul class="interior">
+                                <li><a href="#r">Nivel 2</a></li>
+                                <li><a href="#r">Nivel 2</a></li>
+                          </ul>
+                          </li>
+                          <li><input type="checkbox" name="list" id="nivel1-2"> <img class="icon" src="./img/icon/product.png" alt=""><label id="variables-section" for="nivel1-2">Producción</label>
+                             <ul class="interior">
+                                <li><a href="#r">Proyección</a></li>
+                               <li><a href="#r">Cosecha</a></li>
+                             </ul>
+                          </li>
+                          <li><input type="checkbox" name="list" id="nivel1-3"><img class="icon" src="./img/icon/riego.png" alt=""><label id="variables-section" for="nivel1-3">Riego</label>
+                             <ul class="interior">
+                                <li><a href="#r">Nivel 2</a></li>
+                               <li><a href="#r">Nivel 2</a></li>
+                             </ul>
+                          </li>
+                          <li><input type="checkbox" name="list" id="nivel1-4"><img class="icon" src="./img/icon/fertilizar.png" alt=""><label id="variables-section" for="nivel1-4">Fertilización</label>
+                            <ul class="interior">
+                               <li><a href="#r">Nivel 2</a></li>
+                              <li><a href="#r">Nivel 2</a></li>
+                            </ul>
+                         </li>
+                        <li><input type="checkbox" name="list" id="nivel1-5"><img class="icon" src="./img/icon/sanidad.png" alt=""><label id="variables-section" for="nivel1-5">Sanidad</label>
+                          <ul class="interior">
+                              <li><a href="#r">Nivel 2</a></li>
+                            <li><a href="#r">Nivel 2</a></li>
+                          </ul>
+                        </li>
+                        <li><input type="checkbox" name="list" id="nivel1-6"><img class="icon" src="./img/icon/labores.png" alt=""><label id="variables-section" for="nivel1-6">Labores</label>
+                        <ul class="interior">
+                            <li><a href="#r">Nivel 2</a></li>
+                          <li><a href="#r">Nivel 2</a></li>
+                        </ul>
+                        </li>
+                       </ul>
+                      </div>
+                      <div id="imagen" class="tab-pane fade">
+                          <ul id="menu">
+                              <li><input type="checkbox" name="list" id="nivel2-1"> <img class="icon" src="./img/icon/Artboard 1-8.png" alt=""><label id="variables-section" for="nivel2-1">Drone</label>
+                              <ul class="interior">
+                                    <li><a href="#r">NDVI</a></li>
+                                    <li><a href="#r">Color (RGB)</a></li>
+                                    <li><a href="#r">Infrarrojo</a></li>
+                                    <li><a href="#r">Tèrmico</a></li>
+                              </ul>
+                              </li>
+                              <li><input type="checkbox" name="list" id="nivel2-2"> <img class="icon" src="./img/icon/Artboard 2-8.png" alt=""><label id="variables-section" for="nivel2-2">Satèlite</label>
+                                 <ul class="interior">
+                                    <li><a href="#r">Proyección</a></li>
+                                   <li><a href="#r">Cosecha</a></li>
+                                 </ul>
+                              </li>
+                           
+                           </ul>
+                      </div>
+                      
+                  </div>
+                </ul>
+             </div>
+            </div>  
+          <div class="col-lg-2">
+              <div class="dropdown date">
+                  <button class="btn btn-default dropdown-toggle date" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Fecha
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu fecha" aria-labelledby="dropdownMenu1">
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a data-toggle="tab" id="date-fecha" href="#fecha">Fecha</a></li>
+                      <li class="img-tab"><a data-toggle="tab" href="#intervalo">Intervalo</a></li>
+                      <li class="img-tab"><a data-toggle="tab" href="#trans">Días trans.</a></li>
+                    </ul>
+                  
+                    <div class="tab-content">
+                      <div id="fecha" class="tab-pane fade in active">              
+                        <input type="text" name="fecha" value="10/24/1984" class="valinput"/>
+                      </div>
+                      <div id="intervalo" class="tab-pane fade">
+                          <input type="text" name="daterange" value="Fecha" class="valinput"/>
+                      </div>
+                      <div id="trans" class="tab-pane fade">
+                          <div class="row">
+                              <div class="col-lg-7 col-md-7 col-xs-7 text-right">
+                                  <h6># de dìas transcurridos <br> desde inicio de campaña</h6>
+                              </div>
+                              <div class="col-lg-5 col-md-5 col-xs-5">
+                                  <select name="" id="">
+                                    <option value=""></option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                    <option value="">8</option>
+                                    <option value="">9</option>
+                                    <option value="">10</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </ul>
+                </div>
+            </div>  
+            <div class="col-lg-2 text-right vs">
+              VS.
+            </div>
+     </div>
+     <div id="map">
+
+     </div>
+   </section>
+  
+   <footer>
+      <div id="mySidenav" class="sidenav">
+          <div>
+              <button id="detalle" onclick="openDetalle()"><i class="fa fa-th"></i>Màs detalle</button>
+        </div>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <h2 id="analyticsTitle">Proyecciòn 22/05/18</h2>
+          <div class="container">
+           
+            
+            <div class="row analytics">
+              <div class="col-lg-4 titleResumen">
+                Resumen
+              </div>
+              <div class="col-lg-2 content">
+                  <h6>Promedio</h6>
+                  <div class="resumen" id="promedio">32 tn</div>
+              </div>
+              <div class="col-lg-2 content">
+                  <h6>Desviaciòn</h6>
+                  <div class="resumen" id="desviacion">2.3 tn</div>
+              </div>
+              <div class="col-lg-2 content">
+                  <h6>Màximo</h6>
+                  <div class="resumen" id="maximo">32 tn</div>
+              </div>
+              <div class="col-lg-2 content">
+                  <h6>Mìnimo</h6>
+                  <div class="resumen" id="minimo">2.3 tn</div>
+              </div>
+            </div>
+            <div class="row analytics">
+                <div class="col-lg-4 titleResumen">
+                  # Lotes por umbrales
+                </div>
+                <div class="col-lg-2 content">
+                    <h6>< 50</h6>
+                    <div class="resumen" id="">15 lotes</div>
+                </div>
+                <div class="col-lg-2 content">
+                    <h6>50 - 100</h6>
+                    <div class="resumen" id="">25 lotes</div>
+                </div>
+                <div class="col-lg-2 content">
+                    <h6>100 - 150</h6>
+                    <div class="resumen" id="">22 loes</div>
+                </div>
+                <div class="col-lg-2 content">
+                    <h6>150</h6>
+                    <div class="resumen" id="">5 lotes</div>
+                </div>
+              </div>
+          </div>
+
+          <div class="container">
+           
+            
+              <div class="row analytics">
+                <div class="col-lg-3 titleResumen">
+                  lote
+                </div>
+                <div class="col-lg-3 content">
+                    19.6.5A
+                </div>
+                <div class="col-lg-6 content">
+                   
+                </div>
+                
+              </div>
+              <div class="row analytics">
+                  <div class="col-lg-3 titleResumen">
+                  Lote
+                  </div>
+                  <div class="col-lg-3 content">
+                     19.6.6B
+                  </div>
+                  <div class="col-lg-6 content">
+                      
+                  </div>
+                  
+                </div>
+            </div>
+      </div>
+        
+      <div id="main">
+          <button  onclick="openNav()"><i class="fa fa-th"></i>Ver estadísticas</button>
+        </div>
+   </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PrintArea/2.4.1/jquery.PrintArea.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+ 
+//dropdwn
+
+
+
+$(function() {
+  $(".dropdown-menu li a").click(function(){
+    $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+    $(this).parents(".dropdown").find('.btn').val($(this).data('value')).css({'color':'#69af22','text-shadow':'none','border-color':'transparent'});
+  });
+  
+$('dropdown').hover(
+  function(){
+    $(this).children('.dropdown-menu li a').slideDown('fast');
+  },
+  function(){
+    $(this).children('.dropdown-menu li a').slideUp('fast');
+  }
+)
+
+  $('#data').click(function(){
+    location.href='data.html';
+  })
+
+  $('input[name="fecha"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1999,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+  });
+
+   $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+
+  //PRINT
+$("#imprime").click(function () {
+  $("#body").printArea();
+})
+});
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.height = "400px";
+    document.getElementById("main").style.marginRight= "25px";
+}
+
+function openDetalle(){
+  document.getElementById("mySidenav").style.height = "auto";
+    document.getElementById("main").style.marginRight= "25px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.height = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+</html>

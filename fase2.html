@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+  </head>
+<body>
+   <header>
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid row header">
+          <div class="navbar-header col-md-2 col-lg-2">
+              <a class="navbar-brand" href="#"><img src="./img/logo.png" id="img" alt=""></a>
+          </div>
+          <div class="col-md-5 col-lg-5" id="">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown ">
+                      <button class="btn btn-default dropdown-toggle nav-header proyecto" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Proyecto
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" id="proyecto" aria-labelledby="dropdownMenu1">
+                          <li><a class="title" href="#">Proyecto</a></li>
+                          <li><a href="#">Valle y pampa</a></li>
+                          <li><a href="#">Hortifrut</a></li>
+                          <li><a href="#">Talsa</a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle nav-header" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Fundo
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="title" href="">Fundo</a></li>
+                      <li><a href="#">Rocìo</a></li>
+                      <li><a href="#">Olmos</a></li>
+                      <li><a href="#">Virgen de las Mercedes</a></li>
+                      <li><a href="#">Barranca</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-caret-right text-left"></i>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle nav-header" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Cultivo
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="title" href="">Cultivo</a></li>
+                      <li><a href="#">Granada</a></li>
+                      <li><a href="#">Palto</a></li>
+                      <li><a href="#">Palto Orgánico</a></li>
+                      <li><a href="#">Arándano</a></li>
+                      <li><a href="#">Esparrago</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-caret-right"></i>
+                </div>
+              </div>   
+          </div>
+          <div class="col-md-5 col-lg-5 text-right">
+            <ul class="">
+                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-open"></span> Subir Datos</button>
+                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Exportar</button>
+                <button type="button" class="btn btn-primary"><span class="fa fa-filter"></span> Filtrar</button>
+                
+              <i class="fa fa-user"></i>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   </header> 
+   <section class="container-fluid">
+    <div class="col-lg-6">
+        <div class="section-data">
+            <h1>hello</h1>
+        </div>
+        <div id="map1">
+             
+        </div>
+    </div>
+   </section>
+   <div class="sidebar-archive">
+     <ul class="sidebar-list-folder">
+       <li><i class="fa fa-save"></i></li>
+       <li><i class="fa fa-folder-open"></i></li>
+       <li><i class="fa fa-print"></i></li>
+       <li><i class="fa fa-share-alt"></i></li>
+     </ul>
+   </div>
+   <footer>
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <img src="./img/analytics.jpg" width="100%" alt="">
+      </div>
+        
+      <div id="main">
+          <button  onclick="openNav()"><i class="fa fa-th"></i>Ver estadísticas</button>
+        </div>
+   </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+ 
+//dropdwn
+$(".dropdown-menu li a").click(function(){
+    $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+    $(this).parents(".dropdown").find('.btn').val($(this).data('value')).css({'background':'#036920','color':'#fff','font-weight':'normal'});
+  });
+
+$(function() {
+  $('input[name="fecha"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+  });
+
+   $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.height = "auto";
+    document.getElementById("main").style.marginRight= "25px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.height = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+</html>

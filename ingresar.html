@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body id="body">
+    <style>
+        section.data-excel{
+            margin-top: 20px;
+        }
+        i.fa.data{
+            text-align: left;
+            float: left;
+            font-size: 21px;
+            margin-left: 19px;
+            font-weight: normal;
+        }
+        button.date:hover{
+            color: #fff;
+        }
+        .btn-data{
+            margin-left: 30px;
+        }
+        .btn{
+            color: #69af22;
+            width: 100%;
+            padding: 19px;
+            border: 1px solid #cecece;
+            font-family: 'google';
+            font-size: 17px;
+        }
+        .btn:hover{
+            color: #69af22;
+        }
+        .btn:focus{
+            color: #717171;
+        }
+        .data-excel p{
+          font-size: 15px;
+          font-family: 'google';
+          color: #6e6e6e;
+        }
+        a#closeData.closebtn{
+          border-radius: 100px;
+          background: #dfdfdf;
+          width: 31px;
+          text-align: center;
+          color: #717171;
+          font-weight: bold;
+          font-size: 21px;
+          position: absolute;
+          margin-right: 31px;
+          right: 0;
+        }
+    </style>
+   <header>
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid row header">
+          <div class="navbar-header col-md-2 col-lg-2">
+              <a class="navbar-brand" href="#"><img src="./img/logo.png" id="img" alt=""></a>
+          </div>
+          <div class="col-md-5 col-lg-5" id="">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown ">
+                      <button class="btn btn-default dropdown-toggle nav-header proyecto" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Proyecto
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" id="proyecto" aria-labelledby="dropdownMenu1">
+                          <li><a class="title" href="#">Proyecto</a></li>
+                          <li><a href="#">Valle y pampa</a></li>
+                          <li><a href="#">Hortifrut</a></li>
+                          <li><a href="#">Talsa</a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle nav-header" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Fundo
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="title" href="">Fundo</a></li>
+                      <li><a href="#">Rocìo</a></li>
+                      <li><a href="#">Olmos</a></li>
+                      <li><a href="#">Virgen de las Mercedes</a></li>
+                      <li><a href="#">Barranca</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-caret-right text-left"></i>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle nav-header" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Cultivo
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="title" href="">Cultivo</a></li>
+                      <li><a href="#">Granada</a></li>
+                      <li><a href="#">Palto</a></li>
+                      <li><a href="#">Palto Orgánico</a></li>
+                      <li><a href="#">Arándano</a></li>
+                      <li><a href="#">Esparrago</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-caret-right"></i>
+                </div>
+              </div>   
+          </div>
+          <div class="col-md-5 col-lg-5 text-right">
+            <ul class="">
+                <button type="button" class="btn-primary"><span class="glyphicon glyphicon-open"></span> Subir Datos</button>
+              
+              <i class="fa fa-user"></i>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   </header> 
+   <section class="container-fuid sidebar-archive">
+        <a href="" class='text-left'><i class="fa fa-filter"></i>Filtros</a>
+        <ul class="sidebar-list-folder">
+          <li><a href="#" class="" data-toggle="modal" data-target="#smallModal"><i class="fa fa-save"></i></a></li>
+          <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <div class="modal-body">
+                    <div class="text-center"><i class="fa fa-save"></i></div> 
+                      <form>
+                          <div class="form-group">
+                            <label class="modal-text" for="file">Nombre Archivo:</label>
+                            <input type="text" class="form-control" id="file" placeholder="" value="Hortifrut Olmos Proyecciòn Mayo 2018">
+                          </div>
+                          <div class="form-group">
+                            <label class="modal-text" for="cultivo">Cultivo</label>
+                            <input type="text" class="form-control" id="cultivo" placeholder="" value="Aràndanos">
+                          </div>
+                        </form>
+                  </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">GUARDAR</button>
+                </div>
+              </div>
+            </div>
+          <li><a href="#" class="" data-toggle="modal" data-target="#basicModal"><i class="fa fa-folder-open"></i></a></li>
+          <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <i class="fa fa-folder-open"></i>
+                    </div>
+                      <label class="modal-text text-center" for="">Selecciona un archivo para abrir</label>
+                      <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col">Nombre Archivo</th>
+                              <th scope="col">Cultivo</th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Hortifrut Olmos Proyección 22 Mayo 2018</td>
+                              <td class="text-center">Arándanos</td>
+                              <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td>Hortifrut Olmos Clorofila 15 Abril 2018</td>
+                              <td class="text-center">Arándanos</td>
+                              <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td>Talsa Vegetación 20 Marzo 2018</td>
+                              <td class="text-center">Paltos</td>
+                              <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td>Talsa Vegetación 20 Marzo 2018</td>
+                              <td class="text-center">Paltos</td>
+                              <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td>Talsa Clorofila 20 Marzo 2018</td>
+                              <td class="text-center">Uvas</td>
+                              <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td>Talsa Proyección 20 Marzo 2018</td>
+                              <td class="text-center">Uvas</td>
+                              <td scope="row" class="text-center"><img src="./img/flecha.png" alt=""></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                  <button type="button" class="btn btn-default text-center" data-dismiss="modal">ABRIR</button>
+                </div>
+              </div>
+            </div>
+          <li><i class="glyphicon glyphicon-save"></i></li>
+          <li><a href="javascript:void(0)" id="imprime"><i class="fa fa-print"></i></a></li>
+          <li><i class="fa fa-share-alt"></i></li>
+        
+        </ul>
+ </section>
+   
+   <section class="container data-excel">
+        <div class="" id="newData">
+            <a href="javascript:void(0)" class="closebtn" id="closeData">&times;</a> 
+          
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="card btn-data">
+                      <button type="button"  data-toggle="collapse" href="#collapseIngresar" role="button" aria-expanded="false" aria-controls="collapseExample"  class="btn  card-header"><i class="fa data fa-edit"></i>Ingresar los datos manualmente</button>
+                      <div class="col-lg-6">
+                          <div class="collapse" id="collapseIngresar">
+                              <div class="card card-body">
+                                  <p>Complete la siguiente tabla con los nuevos datos para cada sector.</p>
+                                  <p>Ingresa la fecha y el valor correspondiente.</p>
+                                  <p>Esta tabla te permite acciones semejantes a la de una tabla de Excel.</p>
+                              
+                              
+                              </div>
+                          </div>
+                      </div>
+                      
+                    </div>
+              
+              </div>
+              
+        </div>
+    
+       
+    
+        <!--
+          
+        
+        <div class="card btn-data">
+            <button type="button"  data-toggle="collapse" href="#collapseImportar" role="button" aria-expanded="false" aria-controls="collapseExample" class="btn card-header"><i class="fa data fa-file-excel"></i>Importar desde archivo excel</button>
+            <div class="collapse" id="collapseImportar">
+                <div class="card card-body">
+                    <h1>Importar data</h1></div>
+            </div>
+        </div>
+        -->
+      </section>
+       
+   
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PrintArea/2.4.1/jquery.PrintArea.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+ 
+//dropdwn
+$(".dropdown-menu li a").click(function(){
+    $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+    $(this).parents(".dropdown").find('.btn').val($(this).data('value')).css({'background':'#036920','color':'#fff','text-shadow':'none','border-color':'transparent'});
+  });
+
+
+
+$(function() {
+  $('input[name="fecha"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+  });
+
+   $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+
+  //PRINT
+$("#imprime").click(function () {
+  $("#body").printArea();
+});
+
+$('#closeData').click(function(){
+    location.href='data.html';
+  })
+
+
+});
+
+</script>
+</html>
